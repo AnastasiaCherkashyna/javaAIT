@@ -6,10 +6,10 @@ public class hw01 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        boolean repeat;
+        boolean repeat = true;
         String operation = "";
 
-        while (repeat = true) {
+        while (repeat == true) {
             System.out.println("Введите тип операции: +, -, /, *.");
             operation = scanner.next();
             System.out.println("Введите первое число:");
