@@ -18,9 +18,7 @@ public class Task05Homework {
         for (int i = 0; i < hobbies.length; i++) {
             allHobbies[i] = hobbies[i];
         }
-        for (int i = 0; i < hobbiesNew.length; i++) {
-            allHobbies[i + hobbies.length] = hobbiesNew[i];
-        }
+        System.arraycopy(hobbiesNew, 0, allHobbies, 0 + hobbies.length, hobbiesNew.length);
         System.out.println("Полный список ваших хобби: ");
         for (String all : allHobbies)
             System.out.println(all);

@@ -10,8 +10,8 @@ package lesson12;
 
 public class StringProcessor {
     public static void main(String[] args) {
-        String line = reverseString("Sehr geehrte Damen und Herren");
-        boolean isPal = isPalindrome("abcba");
+        String line = reverseString("789678");
+        boolean isPal = isPalindrome("hjkyui");
         System.out.println(isPal);
     }
 
@@ -25,16 +25,15 @@ public class StringProcessor {
     }
 
     public static boolean isPalindrome(String word) {
-        int i = 0;
-        int j = word.length() - 1;
-        while (i < j) {
-            if (word.charAt(i) != word.charAt(j)) {
+        int firstletter = 0;
+        int lastLetter = word.length() - 1;
+        while (firstletter < lastLetter) {
+            if (word.charAt(firstletter) != word.charAt(lastLetter)) {
                 System.out.println("Это не палиндром.");
                 return false;
             } else {
                 break;
             }
-        }
-        return true;
+        } return true;
     }
 }
