@@ -9,7 +9,6 @@ public class HomeworkVarArgs {
 
     public static double sum(int... number) {
         int sumElement = 0;
-        int average = 0;
         for (int i = 0; i < number.length; i++) {
             if (number[i] < 0) {
                 System.out.println("Введено отрицательное значение!");
