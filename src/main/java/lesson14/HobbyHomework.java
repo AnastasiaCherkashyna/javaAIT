@@ -3,17 +3,12 @@ package lesson14;
 import java.util.Scanner;
 
 public class HobbyHomework {
-    public static void main(String[] args) {
-        // First Array
-        String[] hobbies = new String[4];
-        hobbies[0] = "traveling";
-        hobbies[1] = "reading books";
-        hobbies[2] = "swimming";
-        hobbies[3] = "playing piano";
 
-        String[] hobbiesNew = new String[10];
-        //hobbiesNew[0] = "Cooking";
-        //hobbiesNew[1] = "Guitar";
+    private static String[] hobbies = {"traveling", "reading", "swiming", "playing piano"};
+    private static int[] ratings = {1, 2, 4, 3};
+
+
+    public static void main(String[] args) {
 
         // Task 01
         for (String hobby : hobbies) {
@@ -44,16 +39,38 @@ public class HobbyHomework {
 
         // Task 04
         System.out.println("Введите новое хобби: ");
-        scanner.next();
-        newHobbies(hobbies, hobbiesNew);
+        String newHobby = scanner.next();
+        addHobby(newHobby);
+        System.out.println(hobbies);
+        scanner.close();
+
+        // Task05 Raiting
+        addHobby("Flying");
+        showRating();
+
     }
-        public static String [] newHobbies (String [] oldHobby, String [] newHobby) {
 
-        String [] newHobbies = new String[oldHobby.length + newHobby.length];
-        System.arraycopy(oldHobby, 0, newHobby, oldHobby.length, newHobby.length);
-        return newHobbies;
-
-
+    public static void addHobby(String newHobby) {
+        String[] hobbiesNew = new String[hobbies.length + 1];
+        System.arraycopy(hobbies, 0, hobbiesNew, 0, hobbies.length);
+        hobbiesNew[hobbiesNew.length - 1] = newHobby;
+        hobbies = hobbiesNew;
     }
 
+    public static void showRating() {
+        if (hobbies.length != ratings.length) {
+            System.out.println("Error!");
+        } else {
+            for (int i = 0; i < hobbies.length; i++) {
+                String hobby = hobbies[i];
+                int raiting = ratings[i];
+                System.out.println(String.format("Hobby %s rating %d", hobby, raiting));
+            }
+        }
+    }
 }
+
+
+
+
+
