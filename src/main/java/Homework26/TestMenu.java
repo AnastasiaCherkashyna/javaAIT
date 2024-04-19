@@ -19,7 +19,12 @@ public class TestMenu {
         MenuItem menuItemDish = new MenuItem("Pizza", MenuItemType.DISH);
         MenuItem menuItemColdDisch = new MenuItem("Salat", MenuItemType.DISH);
 
+        //Var 3
+        MenuItem soup = new MenuItem("Gaspacho", MenuItemType.DISH);
+
+
         System.out.println(menuItemHashSet);
+        System.out.println(soup);
         System.out.println("----2----");
         System.out.println(menuItemDish.getName() + " und " + menuItemDrink.getName());
         System.out.println(menuItemColdDisch.getName() + " und " + menuItemColdDrink.getName());
